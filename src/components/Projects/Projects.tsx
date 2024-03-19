@@ -1,8 +1,6 @@
 import ProjectSlide from "../ProjectSlide/ProjectSlide";
 import styles from "./Projects.module.scss";
 import Slider from "react-slick";
-import nextArrow from "../../assets/icons/nextArrow.svg";
-import prevArrow from "../../assets/icons/prevArrow.svg";
 import project1 from "../../assets/img/photo_project1.png";
 import project2 from "../../assets/img/photo_project2.png";
 import project3 from "../../assets/img/photo_project3.png";
@@ -17,25 +15,16 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const SampleNextArrow = (props: { onClick: () => void }) => {
   const { onClick } = props;
-  return (
-    <div className={styles.prevArrow} onClick={onClick}>
-      <img src={prevArrow} alt="prev slide" />
-    </div>
-  );
+  return <div className={styles.prevArrow} onClick={onClick}></div>;
 };
 
 const SamplePrevArrow = (props: { onClick: () => void }) => {
   const { onClick } = props;
-  return (
-    <div className={styles.nextArrow} onClick={onClick}>
-      <img src={nextArrow} alt="next slide" />
-    </div>
-  );
+  return <div className={styles.nextArrow} onClick={onClick}></div>;
 };
 
 const Projects = () => {
   const { height, width } = useWindowDimensions();
-  console.log(width);
 
   const settings = {
     dots: false,
@@ -43,7 +32,8 @@ const Projects = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow onClick={() => {}} />,
+    nextArrow:
+      width <= 665 ? undefined : <SampleNextArrow onClick={() => {}} />,
     prevArrow: <SamplePrevArrow onClick={() => {}} />,
   };
   return (
@@ -60,7 +50,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={width <= 1560 ? project1_vertical : project1}
+          imgSrc={width <= 1560 && width >= 851 ? project1_vertical : project1}
         />
         <ProjectSlide
           heading="Лединг для fire protection technologies"
@@ -72,7 +62,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={width <= 1560 ? project2_vertical : project2}
+          imgSrc={width <= 1560 && width >= 850 ? project2_vertical : project2}
         />
         <ProjectSlide
           heading="Лендинг для SkinClub"
@@ -84,7 +74,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={width <= 1560 ? project3_vertical : project3}
+          imgSrc={width <= 1560 && width >= 850 ? project3_vertical : project3}
         />
         <ProjectSlide
           heading="Лендинг для SkinClub"
@@ -96,7 +86,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={width <= 1560 ? project4_vertical : project4}
+          imgSrc={width <= 1560 && width >= 850 ? project4_vertical : project4}
         />
 
         <ProjectSlide
@@ -109,7 +99,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={width <= 1560 ? project5_vertical : project5}
+          imgSrc={width <= 1560 && width >= 850 ? project5_vertical : project5}
         />
       </Slider>
     </section>

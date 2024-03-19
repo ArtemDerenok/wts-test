@@ -61,3 +61,30 @@
     margin-right: 24px;
   }
 }
+
+@media (max-width: 1020px) {
+  .btn {
+    width: 352px;
+    height: 67px;
+  }
+}
+
+@media (max-width: 850px) {
+}
+
+@media (max-width: 665px) {
+  .img {
+    width: 26px;
+    height: 29px;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .workTime {
+    font-size: 8px;
+    line-height: 11px;
+  }
+}

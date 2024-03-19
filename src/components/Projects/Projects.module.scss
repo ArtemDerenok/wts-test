@@ -3,6 +3,7 @@
 .container {
   padding: 100px 60px 100px 60px;
   position: relative;
+  overflow: hidden;
 }
 
 .title {
@@ -19,7 +20,14 @@
   position: absolute;
   left: 0px;
   z-index: 10;
-  top: 35%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $VIOLET;
+  background-image: url("../../assets/icons/arrowLeft.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -27,6 +35,44 @@
   position: absolute;
   right: 0px;
   z-index: 10;
-  top: 35%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $VIOLET;
+  background-image: url("../../assets/icons/arrowRight.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
+}
+
+@media (max-width: 1020px) {
+  .title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 850px) {
+  .title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 665px) {
+  .container {
+    padding: 0;
+    padding-top: 80px;
+  }
+  .title {
+    padding-left: 16px;
+  }
+  .prevArrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nextArrow {
+    width: 40px;
+    height: 40px;
+  }
 }

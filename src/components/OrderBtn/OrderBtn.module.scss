@@ -23,3 +23,18 @@
     0px 22px 9px 0px rgba(144, 153, 225, 0.03),
     0px 35px 10px 0px rgba(144, 153, 225, 0);
 }
+
+@media (max-width: 1020px) {
+  .btn {
+    width: 320px;
+    height: 67px;
+  }
+}
+
+@media (max-width: 850px) {
+  .btn {
+    font-size: 16px;
+    width: 252px;
+    height: 42px;
+  }
+}

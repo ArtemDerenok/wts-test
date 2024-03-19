@@ -1,9 +1,12 @@
 import logoWts from "../../assets/icons/logo-wts.svg";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Menu from "../Menu/Menu";
 
 import styles from "./Header.module.scss";
 
 const Header = () => {
+  const { height, width } = useWindowDimensions();
+
   return (
     <header className={styles.container}>
       <div className={styles.logo}>
@@ -13,8 +16,12 @@ const Header = () => {
           <p className={styles.workTime}>Режим работы: пн-пт 09:00-18:00</p>
         </div>
       </div>
-      <Menu />
-      <button className={styles.btn}>Связаться с нами</button>
+      {width >= 850 ? (
+        <>
+          <Menu />
+          <button className={styles.btn}>Связаться с нами</button>
+        </>
+      ) : null}
     </header>
   );
 };
