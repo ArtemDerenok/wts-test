@@ -104,6 +104,9 @@
   .leftSection {
     width: 85%;
     padding-left: 16px;
+    height: 812px;
+    background-size: 500px;
+    background-position: bottom -49px left -100px;
     h1 {
       font-size: 26px;
     }
@@ -115,6 +118,7 @@
 
   .rightSection {
     width: 15%;
+    height: 812px;
     div {
       p {
         font-size: 16px;
