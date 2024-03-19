@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.container {
+  padding: 100px 60px 100px 60px;
+  position: relative;
+}
+
+.title {
+  color: $BLACK;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.prevArrow {
+  position: absolute;
+  left: -80px;
+  z-index: 10;
+  top: 35%;
+  cursor: pointer;
+}
+
+.nextArrow {
+  position: absolute;
+  right: -80px;
+  z-index: 10;
+  top: 35%;
+  cursor: pointer;
+}
