@@ -32,9 +32,9 @@ const Projects = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow:
+    nextArrow: <SamplePrevArrow onClick={() => {}} />,
+    prevArrow:
       width <= 665 ? undefined : <SampleNextArrow onClick={() => {}} />,
-    prevArrow: <SamplePrevArrow onClick={() => {}} />,
   };
   return (
     <section className={styles.container}>
