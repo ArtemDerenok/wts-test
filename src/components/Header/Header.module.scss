@@ -1,0 +1,49 @@
+@import "../../variables";
+
+.container {
+  padding: 35px 60px 35px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $GRAY;
+}
+
+.logo {
+  display: flex;
+}
+
+.img {
+}
+
+.text {
+  color: $VIOLET;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.workTime {
+  color: $GRAY;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+  width: 400px;
+  height: 73px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 140%;
+  color: $VIOLET;
+  border: 2px solid $VIOLET;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.btn:hover {
+  color: $WHITE;
+  background-color: $VIOLET;
+}
