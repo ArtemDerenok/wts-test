@@ -13,9 +13,7 @@ function App() {
   };
 
   return (
-    <div
-      className={`${styles.container} ${isMobile ? styles.stopScroll : null}`}
-    >
+    <div className={styles.container}>
       <Header isMobile={isMobile} handleMenu={handleMobileMenu} />
       <Main />
       <Projects />
