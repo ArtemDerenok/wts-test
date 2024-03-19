@@ -22,3 +22,14 @@
   display: flex;
   gap: 11px;
 }
+
+@media (max-width: 1560px) {
+  .container {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $GRAY;
+    padding: 24px 0;
+  }
+}

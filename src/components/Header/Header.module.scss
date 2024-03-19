@@ -4,6 +4,7 @@
   padding: 35px 60px 35px 60px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 1px solid $GRAY;
 }
@@ -46,4 +47,17 @@
 .btn:hover {
   color: $WHITE;
   background-color: $VIOLET;
+}
+
+@media (max-width: 1560px) {
+  .container {
+    padding: 0;
+  }
+  .logo {
+    padding: 28px 24px;
+  }
+
+  .btn {
+    margin-right: 24px;
+  }
 }

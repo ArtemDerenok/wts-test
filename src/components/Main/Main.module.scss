@@ -2,6 +2,7 @@
 
 .container {
   display: flex;
+  position: relative;
 }
 
 .leftSection {
@@ -65,6 +66,24 @@
       span {
         color: $ORANGE;
       }
+    }
+  }
+}
+
+@media (max-width: 1560px) {
+  .leftSection {
+    width: 70%;
+  }
+
+  .rightSection {
+    width: 30%;
+    position: static;
+
+    div {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 10;
     }
   }
 }
