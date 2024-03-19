@@ -23,6 +23,27 @@
   gap: 11px;
 }
 
+.mobileContainer {
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 24px;
+  margin-top: 80px;
+}
+
+.mobileMenuItem {
+  a {
+    color: $WHITE;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+  }
+}
+
 @media (max-width: 1560px) {
   .container {
     order: 3;

@@ -2,3 +2,8 @@
   margin: auto;
   max-width: 1728px;
 }
+
+.stopScroll {
+  overflow: hidden;
+  height: 100vh;
+}

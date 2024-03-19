@@ -1,27 +1,34 @@
+import { useState } from "react";
 import logoWts from "../../assets/icons/logo-wts.svg";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import Hamburger from "../Hamburger/Hamburger";
 import Menu from "../Menu/Menu";
 
 import styles from "./Header.module.scss";
+import MobileMenu from "../MobileMenu/MobileMenu";
+import Logo from "../Logo/Logo";
 
-const Header = () => {
+const Header = ({
+  isMobile,
+  handleMenu,
+}: {
+  isMobile: boolean;
+  handleMenu: () => void;
+}) => {
   const { height, width } = useWindowDimensions();
 
   return (
     <header className={styles.container}>
-      <div className={styles.logo}>
-        <img className={styles.img} src={logoWts} alt="Logo" />
-        <div>
-          <p className={styles.text}>WebTeamStorm</p>
-          <p className={styles.workTime}>Режим работы: пн-пт 09:00-18:00</p>
-        </div>
-      </div>
+      <Logo isMobile={isMobile} />
       {width >= 850 ? (
         <>
-          <Menu />
+          <Menu isMobile={isMobile} />
           <button className={styles.btn}>Связаться с нами</button>
         </>
-      ) : null}
+      ) : (
+        <Hamburger isMobile={isMobile} handleMenu={handleMenu} />
+      )}
+      {isMobile ? <MobileMenu isMobile={isMobile} /> : null}
     </header>
   );
 };

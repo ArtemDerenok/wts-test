@@ -1,0 +1,49 @@
+@import "../../variables";
+
+.logo {
+  display: flex;
+}
+
+.img {
+}
+
+.text {
+  color: $VIOLET;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.workTime {
+  color: $GRAY;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+.white {
+  color: $WHITE;
+}
+
+@media (max-width: 1560px) {
+  .logo {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 665px) {
+  .img {
+    width: 26px;
+    height: 29px;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .workTime {
+    font-size: 8px;
+    line-height: 11px;
+  }
+}
