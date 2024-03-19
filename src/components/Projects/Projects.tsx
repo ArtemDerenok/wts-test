@@ -24,7 +24,7 @@ const SamplePrevArrow = (props: { onClick: () => void }) => {
 };
 
 const Projects = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   const settings = {
     dots: false,

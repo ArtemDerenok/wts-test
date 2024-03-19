@@ -1,5 +1,3 @@
-import { useState } from "react";
-import logoWts from "../../assets/icons/logo-wts.svg";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Hamburger from "../Hamburger/Hamburger";
 import Menu from "../Menu/Menu";
@@ -15,7 +13,7 @@ const Header = ({
   isMobile: boolean;
   handleMenu: () => void;
 }) => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <header className={styles.container}>
