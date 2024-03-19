@@ -8,6 +8,12 @@ import project2 from "../../assets/img/photo_project2.png";
 import project3 from "../../assets/img/photo_project3.png";
 import project4 from "../../assets/img/photo_project4.png";
 import project5 from "../../assets/img/photo_project5.png";
+import project1_vertical from "../../assets/img/photo_project1_v.png";
+import project2_vertical from "../../assets/img/photo_project2_v.png";
+import project3_vertical from "../../assets/img/photo_project3_v.png";
+import project4_vertical from "../../assets/img/photo_project4_v.png";
+import project5_vertical from "../../assets/img/photo_project5_v.png";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const SampleNextArrow = (props: { onClick: () => void }) => {
   const { onClick } = props;
@@ -28,6 +34,9 @@ const SamplePrevArrow = (props: { onClick: () => void }) => {
 };
 
 const Projects = () => {
+  const { height, width } = useWindowDimensions();
+  console.log(width);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -51,7 +60,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={project1}
+          imgSrc={width <= 1560 ? project1_vertical : project1}
         />
         <ProjectSlide
           heading="Лединг для fire protection technologies"
@@ -63,7 +72,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={project2}
+          imgSrc={width <= 1560 ? project2_vertical : project2}
         />
         <ProjectSlide
           heading="Лендинг для SkinClub"
@@ -75,7 +84,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={project3}
+          imgSrc={width <= 1560 ? project3_vertical : project3}
         />
         <ProjectSlide
           heading="Лендинг для SkinClub"
@@ -87,7 +96,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={project4}
+          imgSrc={width <= 1560 ? project4_vertical : project4}
         />
 
         <ProjectSlide
@@ -100,7 +109,7 @@ const Projects = () => {
             "Lorem Ipsum is simply dummy",
           ]}
           term={10}
-          imgSrc={project5}
+          imgSrc={width <= 1560 ? project5_vertical : project5}
         />
       </Slider>
     </section>
