@@ -1,10 +1,9 @@
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import Hamburger from "../Hamburger/Hamburger";
 import Menu from "../Menu/Menu";
-
-import styles from "./Header.module.scss";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Logo from "../Logo/Logo";
+import styles from "./Header.module.scss";
 
 const Header = ({
   isMobile,

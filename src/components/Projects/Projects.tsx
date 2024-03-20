@@ -1,5 +1,4 @@
 import ProjectSlide from "../ProjectSlide/ProjectSlide";
-import styles from "./Projects.module.scss";
 import Slider from "react-slick";
 import project1 from "../../assets/img/photo_project1.png";
 import project2 from "../../assets/img/photo_project2.png";
@@ -12,6 +11,7 @@ import project3_vertical from "../../assets/img/photo_project3_v.png";
 import project4_vertical from "../../assets/img/photo_project4_v.png";
 import project5_vertical from "../../assets/img/photo_project5_v.png";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import styles from "./Projects.module.scss";
 
 const SampleNextArrow = (props: { onClick: () => void }) => {
   const { onClick } = props;
