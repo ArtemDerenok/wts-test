@@ -103,10 +103,8 @@
 @media (max-width: 850px) {
   .leftSection {
     width: 85%;
-    padding-left: 16px;
     height: 812px;
-    background-size: 500px;
-    background-position: bottom -49px left -100px;
+    padding-left: 16px;
     h1 {
       font-size: 26px;
     }
@@ -124,5 +122,12 @@
         font-size: 16px;
       }
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .leftSection {
+    background-size: 500px;
+    background-position: bottom -49px left -100px;
   }
 }
